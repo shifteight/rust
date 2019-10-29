@@ -1,0 +1,6 @@
+[package]
+name = "ownership"
+version = "0.1.0"
+authors = ["Kevin Qian <scifi.org@gmail.com>"]
+
+[dependencies]
