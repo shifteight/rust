@@ -14,3 +14,6 @@ trait是Rust的灵魂。Rust中所有的抽象,比如接口抽象、OOP范式抽
 孤儿规则（Orphan Rule）
 
 trait继承：用来扩展功能
+
+Deref trait：自定义解引用操作。String类型实现了Deref，&String类型会被自动隐式转换为&str。标准库中常用的其他类型都实现了Deref，比如Vec<T>、Box<T>、Rc<T>、Arc<T>等。目的是为了简化编程。
+
