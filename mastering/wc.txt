@@ -1,0 +1,8 @@
+Go ahead and type the program into a file; try to compile and fix all the bugs
+with the help of the compiler. Try to fix one bug at a time and get feedback from
+the compiler by recompiling the code. The point of this exercise, in addition to
+covering the topics of this chapter, is to make you more comfortable with the
+error messages from the compiler, which is an important mental exercise in
+getting to know more about the compiler and how it analyzes your code. You
+might also be surprised to see how the compiler is quite smart in helping you
+removing errors from the code.
