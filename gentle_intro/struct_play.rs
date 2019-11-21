@@ -1,4 +1,5 @@
-#[derive(Debug)]
+use std::fmt;
+
 struct Person {
     first_name: String,
     last_name: String,
@@ -7,9 +8,9 @@ struct Person {
 impl Person {
     fn new(first: &str, last: &str) -> Person {
         Person {
-    	    first_name: first.to_string(),
-    	    last_name: last.to_string()
-	    }
+            first_name: first.to_string(),
+            last_name: last.to_string(),
+        }
     }
     fn full_name(&self) -> String {
         format!("{} {}", self.first_name, self.last_name)
@@ -24,13 +25,19 @@ impl Person {
         (self.first_name, self.last_name)
     }
 }
+
+impl fmt::Debug for Person {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.full_name())
+    }
+}
+
 fn main() {
-	let p = Person::new("John", "Smith");
-	println!("person {} {}", p.first_name, p.last_name);
-	println!("fullname {}", p.full_name());
-	let mut q = p.copy();
-	println!("{:?}", q);
-	q.set_first_name("Jane");
-	println!("{:?}", q.to_tuple());
-	
+    let p = Person::new("John", "Smith");
+    println!("person {} {}", p.first_name, p.last_name);
+    println!("fullname {}", p.full_name());
+    let mut q = p.copy();
+    println!("{:?}", q);
+    q.set_first_name("Jane");
+    println!("{:?}", q.to_tuple());
 }
