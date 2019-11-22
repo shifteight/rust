@@ -1,7 +1,5 @@
 fn main() {
-	let example_closure = |x| x;
+	let dp = |x| println!("{:?}", x);
 
-	let s = example_closure(String::from("hello"));
-	let n = example_closure(5);
-	
+	dp(String::from("hello"));
 }
